@@ -13,13 +13,18 @@
 <section class="box">
     <div>
         <h3>Rosario Fans</h3>
-        <app-fan-card *ngFor="let fanCard of rosarioFans; let i = index" [fan]="fanCard" [index]="i" (fanDeleted)="deleteFan($event, 'rosario')">
-        </app-fan-card>
+        <div *ngFor="let fanCard of rosarioFans; let i = index">
+            <app-fan-card [fan]="fanCard" [index]="i" (fanDeleted)="deleteFan($event, 'rosario')">
+            </app-fan-card>
+            <button (click)="changeTeam(i, 'rosario')">Cambiar equipo</button>
+        </div>
     </div>
     <div>
         <h3>Barcelona Fans</h3>
-        <app-fan-card *ngFor="let fanCard of barcelonaFans; let i = index" [fan]="fanCard" [index]="i" 
-        (fanDeleted)="deleteFan($event, 'barcelona')">    
-        </app-fan-card>
+        <div *ngFor="let fanCard of barcelonaFans; let i = index">
+            <app-fan-card [fan]="fanCard" [index]="i" (fanDeleted)="deleteFan($event, 'barcelona')">
+            </app-fan-card>
+            <button (click)="changeTeam(i, 'barcelona')">Cambiar equipo</button>
+        </div>
     </div>
 </section>

@@ -57,4 +57,15 @@ export class FanListComponent implements OnInit {
     }
   }
 
+  changeTeam(index: number, team: string) {
+    if(team === 'rosario') {
+      const fan: Fan = this.rosarioFans.splice(index, 1)[0];
+      this.barcelonaFans.push(fan);
+    } else {
+      const fan: Fan = this.barcelonaFans.splice(index, 1)[0];
+      this.rosarioFans.push(fan);
+    }
+
+  }
+
 }
