@@ -7,18 +7,21 @@ import { AppComponent } from './app.component';
 import { FanListComponent } from './components/fan-list/fan-list.component';
 import { OtherComponentComponent } from './components/other-component/other-component.component';
 import { FanCardComponent } from './components/fan-card/fan-card.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     FanListComponent,
     OtherComponentComponent,
-    FanCardComponent
+    FanCardComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
